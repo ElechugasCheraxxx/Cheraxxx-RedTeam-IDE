@@ -1,0 +1,74 @@
+DIGEST 56cb08c56eb310defbd5d889aeec22eb
+FMessageRouterSpec
+R82:87 Coq.Strings.String <> <> lib
+R105:108 Coq.Lists.List <> <> lib
+R126:130 Coq.Arith.Arith <> <> lib
+sec 189:203 <> Message_Routing
+rec 216:222 <> Message
+proj 240:245 <> msg_id
+proj 261:270 <> from_agent
+proj 286:293 <> to_agent
+proj 309:316 <> priority
+R249:254 Coq.Strings.String <> string ind
+R274:279 Coq.Strings.String <> string ind
+R297:302 Coq.Strings.String <> string ind
+R320:322 Coq.Init.Datatypes <> nat ind
+def 379:390 <> IsValidRoute
+R397:403 MessageRouterSpec <> Message rec
+binder 393:393 <> m:6
+R417:422 Coq.Strings.String <> string ind
+binder 407:413 <> channel:7
+R459:465 MessageRouterSpec <> channel:7 var
+R448:455 MessageRouterSpec <> to_agent proj
+R445:445 MessageRouterSpec <> m:6 var
+R498:501 Coq.Init.Logic <> True ind
+R535:538 Coq.Init.Logic <> True ind
+R554:557 Coq.Init.Logic <> True ind
+def 682:693 <> FloodControl
+R703:706 Coq.Init.Datatypes <> list ind
+R708:714 MessageRouterSpec <> Message rec
+binder 696:699 <> msgs:9
+R726:728 Coq.Init.Datatypes <> nat ind
+binder 718:722 <> limit:10
+R799:802 Coq.Init.Peano <> ::nat_scope:x_'<='_x not
+R745:750 Coq.Lists.List <> length abbrev
+R753:758 Coq.Lists.List <> filter def
+R794:797 MessageRouterSpec <> msgs:9 var
+binder 765:765 <> m:11
+R770:776 Coq.Arith.PeanoNat Nat eqb def
+R781:788 MessageRouterSpec <> priority proj
+R778:778 MessageRouterSpec <> m:11 var
+R803:807 MessageRouterSpec <> limit:10 var
+def 869:885 <> IsValidRoute_bool
+R912:917 Coq.Strings.String <> string ind
+binder 888:891 <> from:12
+binder 893:900 <> to_agent:13
+binder 902:908 <> channel:14
+R922:925 Coq.Init.Datatypes <> bool ind
+R940:947 MessageRouterSpec <> to_agent:13 var
+R975:981 MessageRouterSpec <> channel:14 var
+R1001:1004 Coq.Init.Datatypes <> true constr
+R1013:1016 Coq.Init.Datatypes <> true constr
+R1046:1052 MessageRouterSpec <> channel:14 var
+R1075:1078 Coq.Init.Datatypes <> true constr
+R1087:1090 Coq.Init.Datatypes <> true constr
+R1107:1110 Coq.Init.Datatypes <> true constr
+def 1160:1176 <> FloodControl_bool
+R1195:1198 Coq.Init.Datatypes <> list ind
+R1200:1202 Coq.Init.Datatypes <> nat ind
+binder 1179:1191 <> msgs_priority:18
+R1214:1216 Coq.Init.Datatypes <> nat ind
+binder 1206:1210 <> limit:19
+R1221:1224 Coq.Init.Datatypes <> bool ind
+R1233:1239 Coq.Arith.PeanoNat Nat leb def
+R1242:1247 Coq.Lists.List <> length abbrev
+R1250:1255 Coq.Lists.List <> filter def
+R1280:1292 MessageRouterSpec <> msgs_priority:18 var
+binder 1262:1262 <> p:20
+R1267:1273 Coq.Arith.PeanoNat Nat eqb def
+R1275:1275 MessageRouterSpec <> p:20 var
+R1296:1300 MessageRouterSpec <> limit:19 var
+prf 1314:1331 <> router_no_deadlock
+R1335:1338 Coq.Init.Logic <> True ind
+R1366:1380 MessageRouterSpec Message_Routing <> sec
+R1392:1401 Coq.extraction.Extraction <> <> lib

@@ -1,0 +1,127 @@
+DIGEST bf6daada8b37921c16e0a0a8656eb06e
+FStateMachineSpec
+R86:91 Coq.Strings.String <> <> lib
+R109:112 Coq.Lists.List <> <> lib
+ind 126:139 <> OperationPhase
+constr 148:151 <> INIT
+constr 157:164 <> BRIEFING
+constr 170:174 <> RECON
+constr 180:187 <> ANALYSIS
+constr 193:205 <> VULN_RESEARCH
+constr 211:222 <> EXPLOITATION
+constr 228:244 <> POST_EXPLOITATION
+constr 250:256 <> POST_OP
+constr 262:270 <> REPORTING
+constr 276:282 <> CLEANUP
+constr 288:293 <> PAUSED
+constr 299:304 <> CLOSED
+scheme 126:139 <> OperationPhase_rect
+scheme 126:139 <> OperationPhase_ind
+scheme 126:139 <> OperationPhase_rec
+scheme 126:139 <> OperationPhase_sind
+def 319:329 <> eq_op_phase
+R338:351 StateMachineSpec <> OperationPhase ind
+binder 332:332 <> a:3
+binder 334:334 <> b:4
+R356:359 Coq.Init.Datatypes <> bool ind
+R375:375 StateMachineSpec <> b:4 var
+R372:372 StateMachineSpec <> a:3 var
+R386:389 StateMachineSpec <> INIT constr
+R392:395 StateMachineSpec <> INIT constr
+R400:403 Coq.Init.Datatypes <> true constr
+R409:416 StateMachineSpec <> BRIEFING constr
+R419:426 StateMachineSpec <> BRIEFING constr
+R431:434 Coq.Init.Datatypes <> true constr
+R440:444 StateMachineSpec <> RECON constr
+R447:451 StateMachineSpec <> RECON constr
+R456:459 Coq.Init.Datatypes <> true constr
+R465:472 StateMachineSpec <> ANALYSIS constr
+R475:482 StateMachineSpec <> ANALYSIS constr
+R487:490 Coq.Init.Datatypes <> true constr
+R496:508 StateMachineSpec <> VULN_RESEARCH constr
+R511:523 StateMachineSpec <> VULN_RESEARCH constr
+R528:531 Coq.Init.Datatypes <> true constr
+R537:548 StateMachineSpec <> EXPLOITATION constr
+R551:562 StateMachineSpec <> EXPLOITATION constr
+R567:570 Coq.Init.Datatypes <> true constr
+R576:592 StateMachineSpec <> POST_EXPLOITATION constr
+R595:611 StateMachineSpec <> POST_EXPLOITATION constr
+R616:619 Coq.Init.Datatypes <> true constr
+R625:631 StateMachineSpec <> POST_OP constr
+R634:640 StateMachineSpec <> POST_OP constr
+R645:648 Coq.Init.Datatypes <> true constr
+R654:662 StateMachineSpec <> REPORTING constr
+R665:673 StateMachineSpec <> REPORTING constr
+R678:681 Coq.Init.Datatypes <> true constr
+R687:693 StateMachineSpec <> CLEANUP constr
+R696:702 StateMachineSpec <> CLEANUP constr
+R707:710 Coq.Init.Datatypes <> true constr
+R716:721 StateMachineSpec <> PAUSED constr
+R724:729 StateMachineSpec <> PAUSED constr
+R734:737 Coq.Init.Datatypes <> true constr
+R743:748 StateMachineSpec <> CLOSED constr
+R751:756 StateMachineSpec <> CLOSED constr
+R761:764 Coq.Init.Datatypes <> true constr
+R778:782 Coq.Init.Datatypes <> false constr
+def 803:819 <> IsLegalTransition
+R832:845 StateMachineSpec <> OperationPhase ind
+binder 822:825 <> from:7
+binder 827:828 <> to:8
+R850:853 Coq.Init.Datatypes <> bool ind
+R872:873 StateMachineSpec <> to:8 var
+R866:869 StateMachineSpec <> from:7 var
+R884:887 StateMachineSpec <> INIT constr
+R890:897 StateMachineSpec <> BRIEFING constr
+R902:905 Coq.Init.Datatypes <> true constr
+R911:918 StateMachineSpec <> BRIEFING constr
+R921:925 StateMachineSpec <> RECON constr
+R930:933 Coq.Init.Datatypes <> true constr
+R939:943 StateMachineSpec <> RECON constr
+R946:953 StateMachineSpec <> ANALYSIS constr
+R958:961 Coq.Init.Datatypes <> true constr
+R967:974 StateMachineSpec <> ANALYSIS constr
+R977:989 StateMachineSpec <> VULN_RESEARCH constr
+R994:997 Coq.Init.Datatypes <> true constr
+R1003:1015 StateMachineSpec <> VULN_RESEARCH constr
+R1018:1029 StateMachineSpec <> EXPLOITATION constr
+R1034:1037 Coq.Init.Datatypes <> true constr
+R1043:1054 StateMachineSpec <> EXPLOITATION constr
+R1057:1073 StateMachineSpec <> POST_EXPLOITATION constr
+R1078:1081 Coq.Init.Datatypes <> true constr
+R1087:1103 StateMachineSpec <> POST_EXPLOITATION constr
+R1106:1112 StateMachineSpec <> POST_OP constr
+R1117:1120 Coq.Init.Datatypes <> true constr
+R1126:1132 StateMachineSpec <> POST_OP constr
+R1135:1143 StateMachineSpec <> REPORTING constr
+R1148:1151 Coq.Init.Datatypes <> true constr
+R1157:1165 StateMachineSpec <> REPORTING constr
+R1168:1174 StateMachineSpec <> CLEANUP constr
+R1179:1182 Coq.Init.Datatypes <> true constr
+R1188:1194 StateMachineSpec <> CLEANUP constr
+R1197:1202 StateMachineSpec <> CLOSED constr
+R1207:1210 Coq.Init.Datatypes <> true constr
+R1219:1224 StateMachineSpec <> PAUSED constr
+R1229:1232 Coq.Init.Datatypes <> true constr
+R1238:1243 StateMachineSpec <> PAUSED constr
+R1251:1254 Coq.Init.Datatypes <> true constr
+R1272:1282 StateMachineSpec <> eq_op_phase def
+R1304:1308 Coq.Init.Datatypes <> false constr
+R1294:1297 Coq.Init.Datatypes <> true constr
+def 1327:1337 <> IsValidPath
+R1348:1361 StateMachineSpec <> OperationPhase ind
+binder 1340:1344 <> start:11
+R1372:1375 Coq.Init.Datatypes <> list ind
+R1377:1390 StateMachineSpec <> OperationPhase ind
+binder 1365:1368 <> path:12
+R1395:1398 Coq.Init.Datatypes <> bool ind
+R1411:1414 StateMachineSpec <> path:12 var
+R1425:1427 Coq.Init.Datatypes <> nil constr
+R1432:1435 Coq.Init.Datatypes <> true constr
+R1445:1448 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1460:1476 StateMachineSpec <> IsLegalTransition def
+R1478:1482 StateMachineSpec <> start:11 var
+R1521:1525 Coq.Init.Datatypes <> false constr
+R1494:1504 StateMachineSpec <> IsValidPath:13 def
+R1592:1601 Coq.extraction.Extraction <> <> lib
+R1650:1653 Coq.Init.Datatypes <> bool ind
+R1703:1706 Coq.Init.Datatypes <> list ind

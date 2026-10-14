@@ -1,0 +1,531 @@
+<!-- 
+Cheraxxx RedTeam IDE - Quick Start Guide (HTML)
+Describe todo lo necesario para compilar y ejecutar la arquitectura poliglota en producción
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheraxxx RedTeam IDE - Production Deployment v1.0</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        body {
+            font-family: 'Monaco', 'Menlo', monospace;
+            background: #0a0e27;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+        }
+        h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .subtitle { font-size: 1.1em; opacity: 0.9; }
+        .version { display: inline-block; background: rgba(0,0,0,0.2); padding: 5px 10px; border-radius: 5px; margin-top: 10px; }
+        
+        section {
+            background: #1a1f3a;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: #764ba2;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        code {
+            background: #0a0e27;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #82b1ff;
+        }
+        
+        pre {
+            background: #0a0e27;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+            border: 1px solid #333;
+            line-height: 1.4;
+        }
+        
+        .command {
+            background: #0a0e27;
+            padding: 15px;
+            border-left: 3px solid #82b1ff;
+            margin: 15px 0;
+            font-family: monospace;
+        }
+        
+        .checklist {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .checklist li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .checklist li:before {
+            content: "☐ ";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        
+        .status.complete { background: #4caf50; color: white; }
+        .status.pending { background: #ff9800; color: white; }
+        .status.error { background: #f44336; color: white; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+        
+        th {
+            background: #0a0e27;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .info-box {
+            background: rgba(102, 126, 234, 0.1);
+            border-left: 3px solid #667eea;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .warning-box {
+            background: rgba(255, 152, 0, 0.1);
+            border-left: 3px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .success-box {
+            background: rgba(76, 175, 80, 0.1);
+            border-left: 3px solid #4caf50;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔮 Cheraxxx RedTeam IDE</h1>
+            <div class="subtitle">Polyglot Offensive Orchestration Platform</div>
+            <div class="version">v1.0.0 • Production • May 30, 2026</div>
+        </header>
+
+        <!-- OVERVIEW -->
+        <section>
+            <h2>📋 Overview</h2>
+            <p>Cheraxxx es una plataforma de orquestación ofensiva de próxima generación que integra múltiples lenguajes de programación optimizados para máxima eficiencia y seguridad:</p>
+            <ul style="margin: 15px 0; margin-left: 20px;">
+                <li><strong>C++23</strong> - Motor de inferencia RDT con aceleración GPU (Metal)</li>
+                <li><strong>Rust</strong> - Criptografía Post-Cuántica (PQC) con seguridad de memoria</li>
+                <li><strong>Go</strong> - Orquestación masiva de swarms (5000+ agentes concurrentes)</li>
+                <li><strong>Swift</strong> - Middleware seguro con interop bidireccional C++</li>
+                <li><strong>Zig</strong> - Generación polimórfica de payloads</li>
+                <li><strong>C/ASM</strong> - Shield engine y syscalls de bajo nivel</li>
+                <li><strong>TypeScript/Perl</strong> - Web intelligence y data surgery</li>
+                <li><strong>Coq/Isabelle/HOL</strong> - Verificación formal</li>
+            </ul>
+        </section>
+
+        <!-- QUICK START -->
+        <section>
+            <h2>⚡ Quick Start (5 minutos)</h2>
+            
+            <h3>1. Verificar Sistema</h3>
+            <div class="command">./verify_production.sh</div>
+            <p>Esto verificará que todos los requisitos previos están instalados.</p>
+            
+            <h3>2. Compilar</h3>
+            <div class="command">./build.sh</div>
+            <p style="margin-top: 10px; color: #888;">Tiempo estimado: 15-30 minutos (depende del hardware)</p>
+            
+            <h3>3. Desplegar</h3>
+            <div class="command">./deploy.sh start</div>
+            <p style="margin-top: 10px;">Iniciará todos los servicios en producción.</p>
+            
+            <h3>4. Verificar</h3>
+            <div class="command">./deploy.sh status</div>
+            <p style="margin-top: 10px;">Mostrará el estado de todos los componentes.</p>
+        </section>
+
+        <!-- PREREQUISITES -->
+        <section>
+            <h2>📦 Prerequisites</h2>
+            <p>Asegúrate de que todas estas herramientas están instaladas:</p>
+            
+            <table>
+                <tr>
+                    <th>Herramienta</th>
+                    <th>Versión Mínima</th>
+                    <th>Verificar</th>
+                </tr>
+                <tr>
+                    <td>CMake</td>
+                    <td>3.24+</td>
+                    <td><code>cmake --version</code></td>
+                </tr>
+                <tr>
+                    <td>Clang++</td>
+                    <td>15.0+</td>
+                    <td><code>clang++ --version</code></td>
+                </tr>
+                <tr>
+                    <td>Swift</td>
+                    <td>5.9+</td>
+                    <td><code>swift --version</code></td>
+                </tr>
+                <tr>
+                    <td>Rust (cargo)</td>
+                    <td>1.75+</td>
+                    <td><code>cargo --version</code></td>
+                </tr>
+                <tr>
+                    <td>Go</td>
+                    <td>1.20+</td>
+                    <td><code>go version</code></td>
+                </tr>
+                <tr>
+                    <td>Zig</td>
+                    <td>0.13+</td>
+                    <td><code>zig version</code></td>
+                </tr>
+                <tr>
+                    <td>Perl</td>
+                    <td>5.30+</td>
+                    <td><code>perl -v</code></td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- BUILD SYSTEM -->
+        <section>
+            <h2>🔨 Build System</h2>
+            
+            <h3>Compilación Limpia</h3>
+            <div class="command">./build.sh clean && ./build.sh</div>
+            
+            <h3>Compilación Incremental</h3>
+            <div class="command">cd build/cmake && make -j8</div>
+            
+            <h3>Compilar solo módulos específicos</h3>
+            <div class="command">cd build/cmake && make cheraxxx_core</div>
+            <div class="command">cd build/cmake && make atlas_go</div>
+            <div class="command">cd build/cmake && make cheraxxx_core_tests</div>
+            
+            <div class="info-box">
+                <strong>💡 Tip:</strong> El parallelismo se detecta automáticamente. Para forzar un número específico de threads: <code>PARALLEL_JOBS=4 ./build.sh</code>
+            </div>
+        </section>
+
+        <!-- DEPLOYMENT -->
+        <section>
+            <h2>🚀 Deployment</h2>
+            
+            <h3>Iniciar Servicios</h3>
+            <div class="command">./deploy.sh start</div>
+            
+            <h3>Verificar Estado</h3>
+            <div class="command">./deploy.sh status</div>
+            
+            <h3>Ver Logs</h3>
+            <div class="command">tail -f /var/log/cheraxxx/*.log</div>
+            
+            <h3>Detener Servicios</h3>
+            <div class="command">./deploy.sh stop</div>
+            
+            <h3>Reiniciar (Graceful)</h3>
+            <div class="command">./deploy.sh restart</div>
+            
+            <div class="info-box">
+                <strong>ℹ️ Nota:</strong> Todos los logs se guardan en <code>/var/log/cheraxxx/</code>. 
+                El nivel de log en producción se establece en "warning" para minimizar ruido.
+            </div>
+        </section>
+
+        <!-- INFRASTRUCTURE -->
+        <section>
+            <h2>🌉 Infrastructure Components</h2>
+            
+            <h3>Autonomous Breadcrumb Buffer (ABB)</h3>
+            <p>Buffer circular lock-free persistente en <code>/dev/shm/cheraxxx_abb_prod</code> (256 MB).</p>
+            <p>Registra todas las transiciones entre módulos políglotas para auditoría post-crash.</p>
+            
+            <div class="command">
+# Inspeccionar ABB<br>
+python3 tools/abb_inspector.py inspect 50<br>
+<br>
+# Analizar patrones<br>
+python3 tools/abb_inspector.py analyze
+            </div>
+            
+            <h3>IPC Bridge Unificado</h3>
+            <p>Sistema de comunicación inter-lenguajes mediante Unix Domain Sockets (UDS).</p>
+            
+            <div class="command">
+# Ver sockets activos<br>
+ls -la /tmp/cheraxxx_ipc_*<br>
+<br>
+# Monitorear conexiones<br>
+lsof | grep cheraxxx_ipc
+            </div>
+            
+            <h3>Swift-C++ Interop</h3>
+            <p>Integración nativa sin wrappers, aprovechando Swift 5.9+ para importación directa.</p>
+        </section>
+
+        <!-- MONITORING -->
+        <section>
+            <h2>📊 Monitoring & Debugging</h2>
+            
+            <h3>Health Checks</h3>
+            <ul class="checklist">
+                <li>Core C++ ejecutándose: <code>ps aux | grep cheraxxx_core</code></li>
+                <li>IPC Sockets: <code>ls /tmp/cheraxxx_ipc_*</code></li>
+                <li>ABB accesible: <code>ls -la /dev/shm/cheraxxx_abb_prod</code></li>
+                <li>Database conectada: Ver logs de core</li>
+            </ul>
+            
+            <h3>Performance Metrics (M4 Pro)</h3>
+            <table>
+                <tr>
+                    <th>Métrica</th>
+                    <th>Expected</th>
+                </tr>
+                <tr>
+                    <td>Latencia IPC</td>
+                    <td>&lt;100µs</td>
+                </tr>
+                <tr>
+                    <td>ABB Throughput</td>
+                    <td>1M writes/sec</td>
+                </tr>
+                <tr>
+                    <td>Agents concurrentes</td>
+                    <td>5000+</td>
+                </tr>
+                <tr>
+                    <td>Startup Time</td>
+                    <td>~3 segundos</td>
+                </tr>
+            </table>
+            
+            <h3>Debugging con DTrace (macOS)</h3>
+            <div class="command">
+# Rastrear syscalls del Core<br>
+sudo dtrace -n 'syscall:::entry { @[execname] = count(); }' -p $(pgrep cheraxxx_core)<br>
+<br>
+# Rastrear boundary probes (transiciones)<br>
+sudo dtrace -P 'pid$target:::entry' -c './deploy.sh start'
+            </div>
+        </section>
+
+        <!-- TROUBLESHOOTING -->
+        <section>
+            <h2>🔧 Troubleshooting</h2>
+            
+            <h3>Build falla en CMake</h3>
+            <div class="warning-box">
+                <strong>Problema:</strong> Error de configuración de CMake<br>
+                <strong>Solución:</strong>
+                <div class="command">
+rm -rf build/cmake/CMakeCache.txt<br>
+./build.sh
+                </div>
+            </div>
+            
+            <h3>IPC Timeout</h3>
+            <div class="warning-box">
+                <strong>Problema:</strong> Los componentes no pueden comunicarse<br>
+                <strong>Solución:</strong>
+                <div class="command">
+# Verificar sockets<br>
+ls -la /tmp/cheraxxx_ipc_*<br>
+<br>
+# Si no existen, reiniciar<br>
+./deploy.sh restart
+                </div>
+            </div>
+            
+            <h3>ABB no accesible</h3>
+            <div class="warning-box">
+                <strong>Problema:</strong> /dev/shm/cheraxxx_abb_prod no existe<br>
+                <strong>Solución:</strong>
+                <div class="command">
+rm -f /dev/shm/cheraxxx_abb_prod<br>
+./deploy.sh restart
+                </div>
+            </div>
+            
+            <h3>Core se cuelga</h3>
+            <div class="warning-box">
+                <strong>Solución:</strong> Revisar logs de detalle
+                <div class="command">
+tail -100 /var/log/cheraxxx/core.log<br>
+tail -100 /var/log/cheraxxx/atlas.log
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTION CHECKLIST -->
+        <section>
+            <h2>✅ Production Checklist</h2>
+            <ul class="checklist">
+                <li>Todos los módulos compilados exitosamente</li>
+                <li>ABB inicializado en /dev/shm/cheraxxx_abb_prod</li>
+                <li>IPC sockets creados en /tmp/cheraxxx_ipc_*</li>
+                <li>Configuración de producción cargada</li>
+                <li>Logs con nivel "warning" (mínimo ruido)</li>
+                <li>Database PostgreSQL conectada</li>
+                <li>Redis cache sincronizado</li>
+                <li>Health checks pasando</li>
+                <li>Permisos restrictivos en directorios sensibles</li>
+                <li>Backups de configuración realizados</li>
+            </ul>
+        </section>
+
+        <!-- SECURITY -->
+        <section>
+            <h2>🔐 Security Features</h2>
+            
+            <div class="success-box">
+                <strong>✓ OLLVM Obfuscation</strong> - IR-level obfuscation habilitada
+            </div>
+            
+            <div class="success-box">
+                <strong>✓ ABB Persistence</strong> - Audibilidad mediante mmap (sobrevive crashes)
+            </div>
+            
+            <div class="success-box">
+                <strong>✓ IPC Timeouts</strong> - Protección contra DoS
+            </div>
+            
+            <div class="success-box">
+                <strong>✓ Memory Safety</strong> - Rust para cipher, Swift para middleware
+            </div>
+            
+            <div class="success-box">
+                <strong>✓ Formal Verification</strong> - Coq para algoritmos criptográficos críticos
+            </div>
+        </section>
+
+        <!-- ARCHITECTURE DIAGRAM -->
+        <section>
+            <h2>🏗️ Architecture Overview</h2>
+            <pre>
+┌─────────────────────────────────────────────────────────────┐
+│                    SwiftUI Frontend (macOS)                  │
+└──────────────────────┬──────────────────────────────────────┘
+                       │
+                       ▼ (Swift-C++ Interop)
+┌─────────────────────────────────────────────────────────────┐
+│           Swift Middleware (Actors, Safe Concurrency)        │
+└──────────────────────┬──────────────────────────────────────┘
+                       │
+        ┌──────────────┴──────────────┐
+        ▼                             ▼
+┌──────────────────┐        ┌──────────────────┐
+│  C++ RDT Core    │        │  Go Atlas Swarm  │
+│  (GPU/Metal)     │        │  (5000+ agents)  │
+└──────┬───────────┘        └────────┬─────────┘
+       │                             │
+       ├─────┬─────┬────────┬────────┤
+       ▼     ▼     ▼        ▼        ▼
+    ┌──────┬──────┬───────┬────────┬─────┐
+    │ Rust │  Zig │   C   │  Perl  │ TS  │
+    │ PQC  │Payloads│Shield│Surgery│Intel│
+    └──────┴──────┴───────┴────────┴─────┘
+       │
+       ▼
+    ABB (256 MB) + IPC Bridge
+    (Transiciones inter-lenguajes)
+            </pre>
+        </section>
+
+        <!-- NEXT STEPS -->
+        <section>
+            <h2>📝 Next Steps</h2>
+            <ol style="margin: 15px 0; margin-left: 20px;">
+                <li>Ejecutar verificación: <code>./verify_production.sh</code></li>
+                <li>Compilar sistema: <code>./build.sh</code></li>
+                <li>Iniciar deployment: <code>./deploy.sh start</code></li>
+                <li>Verificar componentes: <code>./deploy.sh status</code></li>
+                <li>Revisar logs: <code>tail -f /var/log/cheraxxx/*.log</code></li>
+                <li>Inspeccionar ABB: <code>python3 tools/abb_inspector.py</code></li>
+            </ol>
+        </section>
+
+        <!-- DOCUMENTATION -->
+        <section>
+            <h2>📚 Documentation</h2>
+            <ul style="margin: 15px 0; margin-left: 20px;">
+                <li><strong>PRODUCTION_DEPLOYMENT.md</strong> - Guía completa de deployment</li>
+                <li><strong>ARCHITECTURE.md</strong> - Diseño arquitectónico detallado</li>
+                <li><strong>AGENT_PROTOCOLS.md</strong> - Protocolos de agentes</li>
+                <li><strong>ROADMAP.md</strong> - Hoja de ruta futura</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>Cheraxxx RedTeam IDE v1.0.0 • Production Edition • May 30, 2026</p>
+            <p>Optimized for Apple Silicon (M4 Pro) • Polyglot Architecture • Zero-latency Model</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+# Hardware configuration
+# Phase 1: M4 Pro (36GB Unified Memory)
+# Phase 2+: Add Blackwell nodes below
+
+[[nodes]]
+id       = "local"
+backend  = "llama_cpp"     # Optimized for GGUF on M4 Pro
+vram_gb  = 48.0
+host     = "127.0.0.1"
+
+# Uncomment when Blackwell nodes are available:
+# [[nodes]]
+# id       = "blackwell-1"
+# backend  = "llama_cpp_cuda"
+# vram_gb  = 96.0
+# host     = "192.168.1.101"
+#
+# [[nodes]]
+# id       = "blackwell-2"
+# backend  = "llama_cpp_cuda"
+# vram_gb  = 96.0
+# host     = "192.168.1.102"

@@ -1,0 +1,13 @@
+DIGEST 09fbb7e005323c28fdd77fe422133cec
+FMathSpec
+R83:88 Coq.ZArith.ZArith <> <> lib
+R106:115 Coq.extraction.Extraction <> <> lib
+def 130:142 <> certified_add
+R151:151 Coq.Numbers.BinNums <> Z ind
+binder 145:145 <> a:1
+binder 147:147 <> b:2
+R156:156 Coq.Numbers.BinNums <> Z ind
+R163:165 Coq.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R162:162 MathSpec <> a:1 var
+R166:166 MathSpec <> b:2 var
+R265:265 Coq.Numbers.BinNums <> Z ind

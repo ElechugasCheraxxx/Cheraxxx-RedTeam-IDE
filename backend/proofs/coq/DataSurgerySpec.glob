@@ -1,0 +1,69 @@
+DIGEST ff6db37d656c4527a35de6e1617f7c09
+FDataSurgerySpec
+R86:91 Coq.Strings.String <> <> lib
+R109:112 Coq.Lists.List <> <> lib
+R130:133 Coq.Bool.Bool <> <> lib
+sec 170:181 <> Data_Surgery
+rec 194:201 <> Artifact
+proj 219:224 <> art_id
+proj 240:250 <> source_node
+proj 266:279 <> integrity_hash
+proj 295:306 <> is_corrupted
+R228:233 Coq.Strings.String <> string ind
+R254:259 Coq.Strings.String <> string ind
+R283:288 Coq.Strings.String <> string ind
+R310:313 Coq.Init.Datatypes <> bool ind
+def 380:399 <> Extraction_Integrity
+R408:413 Coq.Strings.String <> string ind
+binder 402:404 <> raw:6
+R423:430 DataSurgerySpec <> Artifact rec
+binder 417:419 <> art:7
+R473:522 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R465:467 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R452:463 DataSurgerySpec <> is_corrupted proj
+R447:449 DataSurgerySpec <> art:7 var
+R468:472 Coq.Init.Datatypes <> false constr
+R540:543 Coq.Init.Logic <> ::type_scope:x_'<>'_x not
+R528:538 DataSurgerySpec <> source_node proj
+R523:525 DataSurgerySpec <> art:7 var
+def 607:631 <> Extraction_Integrity_bool
+R640:645 Coq.Strings.String <> string ind
+binder 634:636 <> raw:8
+R655:662 DataSurgerySpec <> Artifact rec
+binder 649:651 <> art:9
+R667:670 Coq.Init.Datatypes <> bool ind
+R679:679 Coq.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R703:708 Coq.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R764:764 Coq.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R680:683 Coq.Init.Datatypes <> negb def
+R690:701 DataSurgerySpec <> is_corrupted proj
+R685:687 DataSurgerySpec <> art:9 var
+R712:721 Coq.Strings.String <> string_dec def
+R728:738 DataSurgerySpec <> source_node proj
+R723:725 DataSurgerySpec <> art:9 var
+R760:763 Coq.Init.Datatypes <> true constr
+R749:753 Coq.Init.Datatypes <> false constr
+prf 869:895 <> surgery_preserves_integrity
+R917:922 Coq.Strings.String <> string ind
+binder 911:913 <> raw:10
+R932:939 DataSurgerySpec <> Artifact rec
+binder 926:928 <> art:11
+R987:990 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R980:982 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R947:971 DataSurgerySpec <> Extraction_Integrity_bool def
+R973:975 DataSurgerySpec <> raw:10 var
+R977:979 DataSurgerySpec <> art:11 var
+R983:986 Coq.Init.Datatypes <> true constr
+R1009:1011 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R996:1007 DataSurgerySpec <> is_corrupted proj
+R991:993 DataSurgerySpec <> art:11 var
+R1012:1016 Coq.Init.Datatypes <> false constr
+R1061:1085 DataSurgerySpec <> Extraction_Integrity_bool def
+R1105:1117 Coq.Bool.Bool <> andb_true_iff thm
+R1105:1117 Coq.Bool.Bool <> andb_true_iff thm
+R1105:1117 Coq.Bool.Bool <> andb_true_iff thm
+R1164:1176 Coq.Bool.Bool <> negb_true_iff thm
+R1164:1176 Coq.Bool.Bool <> negb_true_iff thm
+R1216:1227 DataSurgerySpec Data_Surgery <> sec
+R1239:1248 Coq.extraction.Extraction <> <> lib
+R1297:1300 Coq.Init.Datatypes <> bool ind

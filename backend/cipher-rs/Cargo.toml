@@ -1,0 +1,24 @@
+[package]
+name = "cipher-rs"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+name = "cipher_rs"
+crate-type = ["staticlib", "cdylib"]
+
+[dependencies]
+# Usamos la meta-crate para evitar conflictos de traits
+pqcrypto = { version = "0.18", features = ["pqcrypto-mlkem", "pqcrypto-mldsa"] }
+libc = "0.2"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+pqcrypto-mlkem = "0.1.1"
+pqcrypto-mldsa = "0.1.2"
+pqcrypto-traits = "0.3.5"
+regex = "1.10"
+memmap2 = "0.9"
+rayon = "1.8" # Procesamiento paralelo nativo
+once_cell = "1.18" # Para el Singleton del Orquestador
+dashmap = "5.5" # Mapa concurrente de alto rendimiento para los 14 agentes

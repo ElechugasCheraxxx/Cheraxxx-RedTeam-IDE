@@ -1,0 +1,62 @@
+syntax = "proto3";
+
+package cheraxxx.atlas;
+option go_package = "cheraxxx/atlas/pb";
+
+service SwarmOrchestrator {
+    // Registro de un nuevo agente en la Swarm
+    rpc RegisterAgent(AgentInfo) returns (RegistrationResponse);
+
+    // Stream de telemetría bidireccional
+    rpc TunnelTelemetria(stream TelemetryData) returns (stream ControlCommand);
+
+    // Bus de Mensajes Centralizado (MessageRouter Go-native)
+    rpc RouteMessage(Message) returns (RouteResponse);
+    rpc SubscribeMessages(SubscribeRequest) returns (stream Message);
+}
+
+message Message {
+    string id = 1;
+    string from = 2;
+    string to = 3;
+    string subject = 4;
+    bytes payload = 5;
+    uint32 priority = 6;
+    uint64 timestamp = 7;
+}
+
+message RouteResponse {
+    bool delivered = 1;
+    string error = 2;
+}
+
+message SubscribeRequest {
+    string client_id = 1;
+    repeated string topics = 2;
+}
+
+message AgentInfo {
+    string agent_id = 1;
+    string target_os = 2;
+    string arch = 3;
+    string connection_type = 4;
+}
+
+message RegistrationResponse {
+    bool success = 1;
+    string session_token = 2;
+    string error_message = 3;
+}
+
+message TelemetryData {
+    string agent_id = 1;
+    uint64 timestamp = 2;
+    bytes payload = 3;
+    map<string, string> metadata = 4;
+}
+
+message ControlCommand {
+    string command_id = 1;
+    string action = 2;
+    bytes params = 3;
+}

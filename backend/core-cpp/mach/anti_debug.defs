@@ -1,0 +1,38 @@
+/*
+ * anti_debug.defs - Anti-Debugging and Self-Protection Subsystem for Cheraxxx
+ * Provides Mach-level interception of debug events and state protection.
+ */
+
+subsystem anti_debug 6000;
+
+#include <mach/std_types.defs>
+#include <mach/mach_types.defs>
+
+/*
+ * anti_debug_report_violation
+ * Envia una alerta inmediata al Core cuando se detecta un intento de atachado o breakpoint.
+ */
+simpleroutine anti_debug_report_violation(
+        server_port     : mach_port_t;
+        violator_pid    : int;
+        violation_type  : int;  /* 1: PTRACE, 2: MACH_EXC, 3: DEBUG_REG */
+        severity        : int
+);
+
+/*
+ * anti_debug_set_stealth_mode
+ * Activa tecnicas de camuflaje en el kernel para el proceso actual.
+ */
+routine anti_debug_set_stealth_mode(
+        server_port     : mach_port_t;
+        enabled         : boolean_t
+);
+
+/*
+ * anti_debug_heartbeat
+ * Heartbeat de integridad entre el monitor de proteccion y el Core principal.
+ */
+simpleroutine anti_debug_heartbeat(
+        server_port     : mach_port_t;
+        integrity_token : uint64_t
+);

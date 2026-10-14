@@ -1,0 +1,203 @@
+# Configuración de Producción para Cheraxxx RedTeam IDE
+# Archivo: config/production.toml
+
+[system]
+version = "1.0.0"
+environment = "production"
+release_date = "2026-05-30"
+build_id = "HYBRID-SCAFFOLD-001"
+
+[performance]
+# Optimizaciones para Apple Silicon (M4 Pro)
+max_threads = 8
+cpu_affinity = true
+enable_hyperthreading = true
+memory_optimization = "aggressive"
+
+[security]
+stealth_level = "maximum"
+enable_ollvm_obfuscation = true
+enable_kernel_shield = true
+enable_anti_forensics = true
+enable_anti_vm_detection = true
+anti_edits_tactics = "extreme"
+
+# Autonomous Breadcrumb Buffer para auditoría
+[infraestructure.abb]
+enabled = true
+buffer_size_mb = 256
+mmap_path = "build/abb/cheraxxx_abb_prod"
+persistence_mode = "mmap"  # Sobrevive crashes
+
+# IPC Bridge para comunicación inter-lenguajes
+[infraestructure.ipc]
+enabled = true
+protocol = "unix_domain_socket"
+socket_base_path = "/tmp/cheraxxx_ipc_"
+timeout_ms = 5000
+max_connections_per_component = 100
+
+[logging]
+level = "warning"  # Production: minimizar logs
+format = "binary"  # Evitar reversibilidad
+output_dir = "logs"
+rotate_mb = 100
+retention_days = 7
+
+# Core C++ (Inferencia RDT)
+[modules.cpp_core]
+enabled = true
+gpu_acceleration = "metal"  # Metal Performance Shaders en M4
+kv_cache_strategy = "shifting"  # KV Cache Shifting para MPS
+max_context_length = 8192
+batch_size = 32
+
+# Middleware Swift
+[modules.swift_middleware]
+enabled = true
+actor_model = "safe_concurrency"
+memory_management = "arc"  # Automatic Reference Counting
+enable_direct_cpp_interop = true
+
+# Cipher Module (Rust)
+[modules.rust_cipher]
+enabled = true
+pqc_algorithm = "ml-kem-768"  # Post-Quantum Cryptography
+signature_algorithm = "ml-dsa-65"
+enable_ffi = true
+stack_protection = "full"
+
+# Atlas Swarm (Go)
+[modules.go_atlas]
+enabled = true
+max_concurrent_agents = 5000
+goroutine_pool_size = 2000
+grpc_endpoints = [
+    "127.0.0.1:50051",
+    "127.0.0.1:50052"
+]
+enable_telemetry = false  # Production: deshabilitar telemetría
+
+# Payload Orchestrator (Zig)
+[modules.zig_payloads]
+enabled = true
+compile_mode = "release_fast"
+optimize_for_size = true
+enable_polymorphism = true
+shellcode_obfuscation = "xor_rotate"
+
+# Shield Engine (C)
+[modules.c_shield]
+enabled = true
+kernel_hooks = true
+syscall_interception = true
+position_independent_code = true
+evasion_level = "advanced"
+
+# Web Intel (TypeScript/Bun)
+[modules.ts_intel]
+enabled = true
+runtime = "bun"
+web_target_timeout_ms = 30000
+cloud_pivot_workers = 4
+memory_sandbox = true
+
+# Data Surgery (Perl)
+[modules.perl_surgery]
+enabled = true
+regex_engine = "optimized"
+max_artifact_size_mb = 512
+parallel_filters = true
+
+# Formal Verification
+[verification]
+coq_proof_extraction = false  # Disabled en producción (overhead)
+isabelle_swarm_proofs = false
+hol_security_proofs = false
+
+# Hardware Configuration
+[hardware]
+platform = "darwin"
+architecture = "arm64"
+processor = "m4-pro"
+cores = 8
+memory_gb = 16
+gpu = "metal"
+
+# C2 & Payload Configuration
+[c2]
+protocol = "https"
+callback_interval_sec = 300
+encryption = "aes-256-gcm"
+stealth_sleep = 3600
+jitter_percent = 20
+
+# Mission Execution
+[missions]
+max_concurrent_missions = 10
+mission_timeout_sec = 86400
+enable_auto_cleanup = true
+evidence_preservation = "secure_delete"
+
+# Networking
+[network]
+tunnel_protocol = "encrypted_grpc"
+proxy_chain_enabled = true
+dns_over_https = true
+ipv6_support = true
+enable_traffic_obfuscation = true
+
+# Database Configuration
+[database]
+engine = "postgresql"
+connection_pool_size = 20
+replica_sync_ms = 1000
+encryption_at_rest = true
+audit_logging = true
+
+[database.connection]
+host = "localhost"
+port = 5432
+database = "cheraxxx_prod"
+# Use environment variable: CHERAXXX_DB_PASSWORD
+ssl_mode = "require"
+
+# Cache Strategy
+[cache]
+engine = "redis"
+distributed = true
+ttl_seconds = 3600
+enable_compression = true
+serialization = "flatbuffers"
+
+[cache.redis]
+endpoints = [
+    "127.0.0.1:6379"
+]
+password_env_var = "CHERAXXX_REDIS_PASSWORD"
+
+# Monitoring & Observability
+[monitoring]
+enable_metrics = false  # Production: deshabilitar
+enable_tracing = false
+health_check_interval_sec = 60
+alerting_enabled = true
+
+[monitoring.alerts]
+cpu_threshold_percent = 80
+memory_threshold_percent = 85
+disk_threshold_percent = 90
+
+# Deployment
+[deployment]
+rolling_update = true
+max_restart_attempts = 3
+graceful_shutdown_timeout_sec = 30
+health_check_delay_sec = 5
+
+# Feature Flags
+[features]
+enable_experimental_modules = false
+enable_debug_interface = false
+enable_admin_dashboard = false
+enable_api_documentation = false

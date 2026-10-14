@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/qt/qml">
+        <file alias="Main.qml">Main.qml</file>
+        <file alias="Theme.qml">theme/Theme.qml</file>
+        <file alias="Sidebar.qml">panels/Sidebar.qml</file>
+        <file alias="TopBar.qml">panels/TopBar.qml</file>
+        <file alias="HardwareMonitor.qml">panels/HardwareMonitor.qml</file>
+        <file alias="OperationBrief.qml">panels/OperationBrief.qml</file>
+        <file alias="AgentWorkspace.qml">panels/AgentWorkspace.qml</file>
+        <file alias="CipherCommandCenter.qml">panels/CipherCommandCenter.qml</file>
+        <file alias="CommunicationFeed.qml">panels/CommunicationFeed.qml</file>
+        <file alias="BlackboardLiveView.qml">panels/BlackboardLiveView.qml</file>
+        <file alias="EvidenceVault.qml">panels/EvidenceVault.qml</file>
+        <file alias="OperationTimeline.qml">panels/OperationTimeline.qml</file>
+        <file alias="AutonomyControls.qml">panels/AutonomyControls.qml</file>
+        <file alias="ReportForge.qml">panels/ReportForge.qml</file>
+        <file alias="BriefItem.qml">components/BriefItem.qml</file>
+        <file alias="MetricBox.qml">components/MetricBox.qml</file>
+        <file alias="StatusRow.qml">components/StatusRow.qml</file>
+        <file alias="StatusIndicator.qml">components/StatusIndicator.qml</file>
+        <file alias="TimelinePoint.qml">components/TimelinePoint.qml</file>
+        <file alias="TimelineLine.qml">components/TimelineLine.qml</file>
+        <file alias="Spacer.qml">components/Spacer.qml</file>
+    </qresource>
+</RCC>

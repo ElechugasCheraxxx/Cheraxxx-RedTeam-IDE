@@ -1,0 +1,203 @@
+DIGEST b251086ff7582739d44a7ec8c717e308
+FPDGSpec
+R97:100 Coq.Lists.List <> <> lib
+R118:123 Coq.Strings.String <> <> lib
+R141:145 Coq.Arith.Arith <> <> lib
+R163:172 Coq.Lists.SetoidList <> <> lib
+rec 183:191 <> Primitive
+proj 207:209 <> pid
+proj 223:235 <> impact_weight
+proj 265:277 <> is_logic_flaw
+R213:218 Coq.Strings.String <> string ind
+R239:241 Coq.Init.Datatypes <> nat ind
+R281:284 Coq.Init.Datatypes <> bool ind
+ax 300:303 <> Edge
+R316:319 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R307:315 PDGSpec <> Primitive rec
+R329:332 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R320:328 PDGSpec <> Primitive rec
+def 392:403 <> IsValidChain
+R414:417 Coq.Init.Datatypes <> list ind
+R419:427 PDGSpec <> Primitive rec
+binder 406:410 <> chain:7
+R448:452 PDGSpec <> chain:7 var
+R463:465 Coq.Init.Datatypes <> nil constr
+R470:473 Coq.Init.Logic <> True ind
+R480:483 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+binder 496:497 <> p1:9
+binder 499:500 <> p2:10
+R503:503 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R546:550 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R504:510 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R516:517 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 511:512 <> l1:11
+binder 514:515 <> l2:12
+R523:525 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R518:522 PDGSpec <> chain:7 var
+R528:531 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
+R526:527 PDGSpec <> l1:11 var
+R534:537 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R532:533 PDGSpec <> p1:9 var
+R540:543 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R538:539 PDGSpec <> p2:10 var
+R544:545 PDGSpec <> l2:12 var
+R551:554 PDGSpec <> Edge defax
+R556:557 PDGSpec <> p1:9 var
+R559:560 PDGSpec <> p2:10 var
+def 644:652 <> IsAcyclic
+R663:666 Coq.Init.Datatypes <> list ind
+R668:676 PDGSpec <> Primitive rec
+binder 655:659 <> chain:13
+binder 698:698 <> p:14
+R711:714 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R701:702 Coq.Lists.List <> In def
+R706:710 PDGSpec <> chain:13 var
+R704:704 PDGSpec <> p:14 var
+R759:761 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R715:723 Coq.Lists.List <> count_occ def
+R753:755 PDGSpec <> pid proj
+R757:757 PDGSpec <> p:14 var
+R737:739 Coq.Lists.List <> map def
+R745:749 PDGSpec <> chain:13 var
+R741:743 PDGSpec <> pid proj
+R725:734 Coq.Strings.String <> string_dec def
+ax 858:861 <> rank
+R874:877 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R865:873 PDGSpec <> Primitive rec
+R878:880 Coq.Init.Datatypes <> nat ind
+ax 889:901 <> edge_rank_inc
+binder 912:913 <> p1:17
+binder 915:916 <> p2:18
+R929:932 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R919:922 PDGSpec <> Edge defax
+R924:925 PDGSpec <> p1:17 var
+R927:928 PDGSpec <> p2:18 var
+R940:942 Coq.Init.Peano <> ::nat_scope:x_'<'_x not
+R933:936 PDGSpec <> rank defax
+R938:939 PDGSpec <> p1:17 var
+R943:946 PDGSpec <> rank defax
+R948:949 PDGSpec <> p2:18 var
+prf 1075:1094 <> chain_rank_monotonic
+R1116:1119 Coq.Init.Datatypes <> list ind
+R1121:1129 PDGSpec <> Primitive rec
+binder 1108:1109 <> l1:21
+binder 1111:1112 <> l2:22
+R1141:1149 PDGSpec <> Primitive rec
+binder 1133:1134 <> p1:23
+binder 1136:1137 <> p2:24
+R1197:1202 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1155:1166 PDGSpec <> IsValidChain def
+R1171:1174 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
+R1169:1170 PDGSpec <> l1:21 var
+R1177:1180 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1175:1176 PDGSpec <> p1:23 var
+R1183:1186 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
+R1181:1182 PDGSpec <> l2:22 var
+R1189:1192 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1187:1188 PDGSpec <> p2:24 var
+R1193:1195 Coq.Init.Datatypes <> nil constr
+R1210:1212 Coq.Init.Peano <> ::nat_scope:x_'<'_x not
+R1203:1206 PDGSpec <> rank defax
+R1208:1209 PDGSpec <> p1:23 var
+R1213:1216 PDGSpec <> rank defax
+R1218:1219 PDGSpec <> p2:24 var
+prf 1439:1463 <> zero_error_path_integrity
+R1485:1488 Coq.Init.Datatypes <> list ind
+R1490:1498 PDGSpec <> Primitive rec
+binder 1477:1481 <> chain:25
+R1522:1525 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1504:1515 PDGSpec <> IsValidChain def
+R1517:1521 PDGSpec <> chain:25 var
+R1526:1534 PDGSpec <> IsAcyclic def
+R1536:1540 PDGSpec <> chain:25 var
+R1582:1590 PDGSpec <> IsAcyclic def
+R1621:1629 Coq.Lists.List <> count_occ def
+R1659:1661 PDGSpec <> pid proj
+R1643:1645 Coq.Lists.List <> map def
+R1647:1649 PDGSpec <> pid proj
+R1631:1640 Coq.Strings.String <> string_dec def
+R1621:1629 Coq.Lists.List <> count_occ def
+R1659:1661 PDGSpec <> pid proj
+R1643:1645 Coq.Lists.List <> map def
+R1647:1649 PDGSpec <> pid proj
+R1631:1640 Coq.Strings.String <> string_dec def
+R1795:1797 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R1751:1759 Coq.Lists.List <> count_occ def
+R1789:1791 PDGSpec <> pid proj
+R1773:1775 Coq.Lists.List <> map def
+R1777:1779 PDGSpec <> pid proj
+R1761:1770 Coq.Strings.String <> string_dec def
+R1795:1797 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R1751:1759 Coq.Lists.List <> count_occ def
+R1789:1791 PDGSpec <> pid proj
+R1773:1775 Coq.Lists.List <> map def
+R1777:1779 PDGSpec <> pid proj
+R1761:1770 Coq.Strings.String <> string_dec def
+R1814:1825 Coq.Lists.List <> count_occ_In thm
+R1814:1825 Coq.Lists.List <> count_occ_In thm
+R1834:1839 Coq.Lists.List <> in_map thm
+R1834:1839 Coq.Lists.List <> in_map thm
+R2028:2037 Coq.extraction.Extraction <> <> lib
+R2086:2089 Coq.Init.Datatypes <> bool ind
+R2139:2142 Coq.Init.Datatypes <> list ind
+R2189:2194 Coq.Init.Datatypes <> option ind
+def 2283:2299 <> IsValidChain_bool
+R2310:2313 Coq.Init.Datatypes <> list ind
+R2315:2323 PDGSpec <> Primitive rec
+binder 2302:2306 <> chain:26
+R2346:2349 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2340:2345 Coq.Strings.String <> string ind
+R2356:2359 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2350:2355 Coq.Strings.String <> string ind
+R2360:2363 Coq.Init.Datatypes <> bool ind
+binder 2327:2336 <> check_edge:27
+R2368:2371 Coq.Init.Datatypes <> bool ind
+R2384:2388 PDGSpec <> chain:26 var
+R2399:2401 Coq.Init.Datatypes <> nil constr
+R2406:2409 Coq.Init.Datatypes <> true constr
+R2416:2419 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+binder 2445:2445 <> l:29
+R2464:2464 PDGSpec <> l:29 var
+R2481:2483 Coq.Init.Datatypes <> nil constr
+R2488:2491 Coq.Init.Datatypes <> true constr
+R2504:2507 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2558:2560 Coq.Init.Datatypes <> nil constr
+R2565:2568 Coq.Init.Datatypes <> true constr
+R2585:2588 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2597:2606 PDGSpec <> check_edge:27 var
+R2619:2621 PDGSpec <> pid proj
+R2611:2613 PDGSpec <> pid proj
+R2645:2649 Coq.Init.Datatypes <> false constr
+R2629:2633 PDGSpec <> check:30 var
+binder 2439:2443 <> check:33
+R2688:2692 PDGSpec <> check:33 var
+R2694:2698 PDGSpec <> chain:26 var
+def 2719:2732 <> IsAcyclic_bool
+R2743:2746 Coq.Init.Datatypes <> list ind
+R2748:2756 PDGSpec <> Primitive rec
+binder 2735:2739 <> chain:34
+R2761:2764 Coq.Init.Datatypes <> bool ind
+binder 2787:2787 <> l:35
+binder 2789:2792 <> seen:36
+R2807:2807 PDGSpec <> l:35 var
+R2820:2822 Coq.Init.Datatypes <> nil constr
+R2827:2831 Coq.Init.Datatypes <> false constr
+R2840:2843 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2852:2858 Coq.Lists.List <> existsb def
+R2910:2913 PDGSpec <> seen:36 var
+binder 2865:2865 <> s:39
+R2873:2882 Coq.Strings.String <> string_dec def
+R2886:2886 PDGSpec <> s:39 var
+R2903:2907 Coq.Init.Datatypes <> false constr
+R2893:2896 Coq.Init.Datatypes <> true constr
+R2930:2936 PDGSpec <> has_dup:37 var
+R2942:2945 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2946:2949 PDGSpec <> seen:36 var
+R2920:2923 Coq.Init.Datatypes <> true constr
+binder 2779:2785 <> has_dup:40
+R2965:2968 Coq.Init.Datatypes <> negb def
+R2971:2977 PDGSpec <> has_dup:40 var
+R2995:2997 Coq.Init.Datatypes <> nil constr
+R2980:2982 Coq.Lists.List <> map def
+R2988:2992 PDGSpec <> chain:34 var
+R2984:2986 PDGSpec <> pid proj

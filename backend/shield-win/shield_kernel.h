@@ -1,0 +1,75 @@
+#pragma once
+
+#ifdef _WIN32
+#ifdef _KERNEL_MODE
+#include <ntddk.h>
+#include <wdf.h>
+#else
+#include <windows.h>
+#include <winioctl.h>
+#endif
+#include <initguid.h>
+
+// {A3B4C5D6-E7F8-4901-B2C3-D4E5F6A7B8C9}
+DEFINE_GUID(SHIELD_NET_CALLOUT_GUID, 0xa3b4c5d6, 0xe7f8, 0x4901, 0xb2, 0xc3, 0xd4, 0xe5, 0xf6, 0xa7, 0xb8, 0xc9);
+// {B4C5D6E7-F8A9-4A12-C3D4-E5F6A7B8C9D0}
+DEFINE_GUID(SHIELD_NET_FILTER_GUID, 0xb4c5d6e7, 0xf8a9, 0x4a12, 0xc3, 0xd4, 0xe5, 0xf6, 0xa7, 0xb8, 0xc9, 0xd0);
+
+// Definiciones de IOCTL para comunicación Backend-Kernel (Vanguard-Level)
+#define SHIELD_DEVICE_TYPE 0x8000
+
+#define IOCTL_SHIELD_HIDE_PROCESS \
+    CTL_CODE(SHIELD_DEVICE_TYPE, 0x801, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+#define IOCTL_SHIELD_PROTECT_MEMORY \
+    CTL_CODE(SHIELD_DEVICE_TYPE, 0x802, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+#define IOCTL_SHIELD_INJECT_PAYLOAD \
+    CTL_CODE(SHIELD_DEVICE_TYPE, 0x803, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+#define IOCTL_SHIELD_SET_CORE_PID \
+    CTL_CODE(SHIELD_DEVICE_TYPE, 0x805, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+#define IOCTL_SHIELD_HIDE_PORT \
+    CTL_CODE(SHIELD_DEVICE_TYPE, 0x806, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+#define IOCTL_SHIELD_TOGGLE_NET_STEALTH \
+    CTL_CODE(SHIELD_DEVICE_TYPE, 0x807, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+#define IOCTL_SHIELD_HIDE_FILE \
+    CTL_CODE(SHIELD_DEVICE_TYPE, 0x808, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+// Estructura para registrar el PID del Core
+typedef struct _SHIELD_SET_PID_REQUEST {
+    ULONG ProcessId;
+} SHIELD_SET_PID_REQUEST, *PSHIELD_SET_PID_REQUEST;
+
+// Estructura para peticiones de ocultación
+typedef struct _SHIELD_HIDE_REQUEST {
+    ULONG ProcessId;
+    BOOLEAN Enable;
+} SHIELD_HIDE_REQUEST, *PSHIELD_HIDE_REQUEST;
+
+// Estructura para ocultación de puertos (ShadowSockets)
+typedef struct _SHIELD_HIDE_PORT_REQUEST {
+    USHORT Port;
+    BOOLEAN Enable;
+} SHIELD_HIDE_PORT_REQUEST, *PSHIELD_HIDE_PORT_REQUEST;
+
+// Estructura para control de red
+typedef struct _SHIELD_TOGGLE_NET_REQUEST {
+    BOOLEAN Enable;
+} SHIELD_TOGGLE_NET_REQUEST, *PSHIELD_TOGGLE_NET_REQUEST;
+
+// Estructura para ocultación de archivos (ShadowFS)
+typedef struct _SHIELD_HIDE_FILE_REQUEST {
+    WCHAR Path[260];
+    BOOLEAN Enable;
+} SHIELD_HIDE_FILE_REQUEST, *PSHIELD_HIDE_FILE_REQUEST;
+
+// Declaraciones de funciones
+DRIVER_INITIALIZE DriverEntry;
+EVT_WDF_DRIVER_DEVICE_ADD ShieldEvtDeviceAdd;
+EVT_WDF_IO_QUEUE_IO_DEVICE_CONTROL ShieldEvtIoDeviceControl;
+
+#endif

@@ -1,0 +1,35 @@
+DIGEST 432be999fc3055daceb581d621e662c0
+FCipherSpec
+R75:78 Coq.Lists.List <> <> lib
+R96:101 Coq.ZArith.ZArith <> <> lib
+sec 113:120 <> PQC_Spec
+var 135:141 PQC_Spec Message
+var 162:164 PQC_Spec Key
+var 185:194 PQC_Spec CipherText
+def 264:278 <> Decrypt_Correct
+R290:293 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R287:289 CipherSpec <> PQC_Spec.Key var
+R301:304 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R294:300 CipherSpec <> PQC_Spec.Message var
+R305:314 CipherSpec <> PQC_Spec.CipherText var
+binder 281:283 <> enc:7
+R356:359 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R353:355 CipherSpec <> PQC_Spec.Key var
+R370:373 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R360:369 CipherSpec <> PQC_Spec.CipherText var
+R374:379 Coq.Init.Datatypes <> option ind
+R381:387 CipherSpec <> PQC_Spec.Message var
+binder 347:349 <> dec:8
+binder 404:404 <> k:9
+binder 406:406 <> m:10
+R424:426 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R409:411 CipherSpec <> dec:8 var
+R416:418 CipherSpec <> enc:7 var
+R422:422 CipherSpec <> m:10 var
+R420:420 CipherSpec <> k:9 var
+R413:413 CipherSpec <> k:9 var
+R427:430 Coq.Init.Datatypes <> Some constr
+R432:432 CipherSpec <> m:10 var
+prf 480:497 <> ml_kem_correctness
+R501:504 Coq.Init.Logic <> True ind
+R538:545 CipherSpec PQC_Spec <> sec

@@ -1,0 +1,91 @@
+DIGEST 67902a4878b3e55becdc2581d8021120
+FPQCExplorerSpec
+R82:87 Coq.Strings.String <> <> lib
+R105:108 Coq.Lists.List <> <> lib
+sec 145:156 <> PQC_Explorer
+ind 172:179 <> VulnType
+constr 190:197 <> WeakAlgo
+constr 205:217 <> HardcodedSeed
+constr 225:234 <> NonceReuse
+constr 242:249 <> WeakPRNG
+constr 257:270 <> UnprotectedKey
+scheme 172:179 <> VulnType_rect
+scheme 172:179 <> VulnType_ind
+scheme 172:179 <> VulnType_rec
+scheme 172:179 <> VulnType_sind
+rec 283:292 <> ScanResult
+proj 310:319 <> found_vuln
+proj 333:338 <> v_type
+proj 363:372 <> confidence
+R323:326 Coq.Init.Datatypes <> bool ind
+R342:347 Coq.Init.Datatypes <> option ind
+R349:356 PQCExplorerSpec <> VulnType ind
+R376:378 Coq.Init.Datatypes <> nat ind
+def 439:450 <> IsVulnerable
+R460:465 Coq.Strings.String <> string ind
+binder 453:456 <> code:7
+R476:483 PQCExplorerSpec <> VulnType ind
+binder 469:472 <> type:8
+R506:509 PQCExplorerSpec <> type:8 var
+R522:529 PQCExplorerSpec <> WeakAlgo constr
+R534:540 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R542:543 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 541:541 <> s:10
+R545:547 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R544:544 PQCExplorerSpec <> s:10 var
+R588:591 Coq.Init.Logic <> True ind
+def 661:677 <> IsVulnerable_bool
+R687:692 Coq.Strings.String <> string ind
+binder 680:683 <> code:11
+R704:711 PQCExplorerSpec <> VulnType ind
+binder 696:700 <> vtype:12
+R716:719 Coq.Init.Datatypes <> bool ind
+R734:738 PQCExplorerSpec <> vtype:12 var
+R751:758 PQCExplorerSpec <> WeakAlgo constr
+R766:775 Coq.Strings.String <> string_dec def
+R777:780 PQCExplorerSpec <> code:11 var
+R809:813 Coq.Init.Datatypes <> false constr
+R799:802 Coq.Init.Datatypes <> true constr
+R826:829 Coq.Init.Datatypes <> true constr
+def 958:975 <> Explorer_Soundness
+R991:994 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R985:990 Coq.Strings.String <> string ind
+R995:1004 PQCExplorerSpec <> ScanResult rec
+binder 978:981 <> scan:14
+R1036:1041 Coq.Strings.String <> string ind
+binder 1029:1032 <> code:15
+R1051:1060 PQCExplorerSpec <> ScanResult rec
+binder 1045:1047 <> res:16
+R1083:1090 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1077:1079 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1068:1071 PQCExplorerSpec <> scan:14 var
+R1073:1076 PQCExplorerSpec <> code:15 var
+R1080:1082 PQCExplorerSpec <> res:16 var
+R1114:1121 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1107:1109 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1096:1105 PQCExplorerSpec <> found_vuln proj
+R1091:1093 PQCExplorerSpec <> res:16 var
+R1110:1113 Coq.Init.Datatypes <> true constr
+R1143:1150 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1138:1140 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R1127:1136 PQCExplorerSpec <> confidence proj
+R1122:1124 PQCExplorerSpec <> res:16 var
+R1151:1158 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1171:1173 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1163:1170 PQCExplorerSpec <> VulnType ind
+binder 1159:1159 <> t:17
+R1195:1198 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R1186:1188 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1179:1184 PQCExplorerSpec <> v_type proj
+R1174:1176 PQCExplorerSpec <> res:16 var
+R1189:1192 Coq.Init.Datatypes <> Some constr
+R1194:1194 PQCExplorerSpec <> t:17 var
+R1223:1225 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1199:1215 PQCExplorerSpec <> IsVulnerable_bool def
+R1217:1220 PQCExplorerSpec <> code:15 var
+R1222:1222 PQCExplorerSpec <> t:17 var
+R1226:1229 Coq.Init.Datatypes <> true constr
+prf 1243:1266 <> explorer_trust_invariant
+R1270:1273 Coq.Init.Logic <> True ind
+R1301:1312 PQCExplorerSpec PQC_Explorer <> sec
+R1324:1333 Coq.extraction.Extraction <> <> lib

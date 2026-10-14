@@ -1,0 +1,99 @@
+DIGEST 5ddd5eedca17b0af154c63405575f7c6
+FSovereignBridgeSpec
+R89:94 Coq.Strings.String <> <> lib
+R112:117 Coq.ZArith.ZArith <> <> lib
+R135:138 Coq.Lists.List <> <> lib
+sec 150:167 <> Kernel_Sovereignty
+rec 180:186 <> Process
+proj 204:206 <> pid
+proj 217:225 <> is_hidden
+proj 239:250 <> is_protected
+proj 264:272 <> is_opaque
+R210:210 Coq.Numbers.BinNums <> Z ind
+R229:232 Coq.Init.Datatypes <> bool ind
+R254:257 Coq.Init.Datatypes <> bool ind
+R276:279 Coq.Init.Datatypes <> bool ind
+rec 296:306 <> KernelState
+proj 324:332 <> processes
+proj 354:376 <> network_stealth_enabled
+proj 390:401 <> hidden_ports
+proj 417:428 <> hidden_files
+R336:339 Coq.Init.Datatypes <> list ind
+R341:347 SovereignBridgeSpec <> Process rec
+R380:383 Coq.Init.Datatypes <> bool ind
+R405:408 Coq.Init.Datatypes <> list ind
+R410:410 Coq.Numbers.BinNums <> Z ind
+R432:435 Coq.Init.Datatypes <> list ind
+R437:442 Coq.Strings.String <> string ind
+def 550:560 <> ProcessSafe
+R567:573 SovereignBridgeSpec <> Process rec
+binder 563:563 <> p:11
+R610:613 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R603:605 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R593:601 SovereignBridgeSpec <> is_hidden proj
+R590:590 SovereignBridgeSpec <> p:11 var
+R606:609 Coq.Init.Datatypes <> true constr
+R630:632 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R617:628 SovereignBridgeSpec <> is_protected proj
+R614:614 SovereignBridgeSpec <> p:11 var
+R633:636 Coq.Init.Datatypes <> true constr
+def 653:662 <> SystemSafe
+R670:680 SovereignBridgeSpec <> KernelState rec
+binder 665:666 <> ks:12
+binder 704:704 <> p:13
+R726:729 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R707:708 Coq.Lists.List <> In def
+R716:724 SovereignBridgeSpec <> processes proj
+R712:713 SovereignBridgeSpec <> ks:12 var
+R710:710 SovereignBridgeSpec <> p:13 var
+R730:740 SovereignBridgeSpec <> ProcessSafe def
+R742:742 SovereignBridgeSpec <> p:13 var
+def 838:849 <> SafeToInject
+R865:865 Coq.Numbers.BinNums <> Z ind
+binder 852:861 <> target_pid:14
+R880:880 Coq.Numbers.BinNums <> Z ind
+binder 869:876 <> core_pid:15
+R907:910 Coq.Init.Logic <> ::type_scope:x_'<>'_x not
+R897:906 SovereignBridgeSpec <> target_pid:14 var
+R911:918 SovereignBridgeSpec <> core_pid:15 var
+def 981:996 <> ProcessSafe_bool
+R1003:1009 SovereignBridgeSpec <> Process rec
+binder 999:999 <> p:16
+R1014:1017 Coq.Init.Datatypes <> bool ind
+R1032:1040 SovereignBridgeSpec <> is_hidden proj
+R1029:1029 SovereignBridgeSpec <> p:16 var
+R1070:1073 Coq.Init.Datatypes <> true constr
+R1051:1062 SovereignBridgeSpec <> is_protected proj
+R1048:1048 SovereignBridgeSpec <> p:16 var
+def 1090:1104 <> SystemSafe_bool
+R1112:1122 SovereignBridgeSpec <> KernelState rec
+binder 1107:1108 <> ks:17
+R1127:1130 Coq.Init.Datatypes <> bool ind
+R1139:1145 Coq.Lists.List <> forallb def
+R1168:1176 SovereignBridgeSpec <> processes proj
+R1164:1165 SovereignBridgeSpec <> ks:17 var
+R1147:1162 SovereignBridgeSpec <> ProcessSafe_bool def
+def 1194:1210 <> SafeToInject_bool
+R1235:1235 Coq.Numbers.BinNums <> Z ind
+binder 1213:1222 <> target_pid:18
+binder 1224:1231 <> core_pid:19
+R1240:1243 Coq.Init.Datatypes <> bool ind
+R1255:1262 Coq.ZArith.BinInt Z eq_dec def
+R1264:1273 SovereignBridgeSpec <> target_pid:18 var
+R1275:1282 SovereignBridgeSpec <> core_pid:19 var
+R1300:1303 Coq.Init.Datatypes <> true constr
+R1289:1293 Coq.Init.Datatypes <> false constr
+prf 1317:1342 <> injection_safety_invariant
+R1367:1367 Coq.Numbers.BinNums <> Z ind
+binder 1358:1359 <> tp:20
+binder 1361:1361 <> c:21
+binder 1363:1363 <> p:22
+R1388:1391 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1371:1382 SovereignBridgeSpec <> SafeToInject def
+R1384:1385 SovereignBridgeSpec <> tp:20 var
+R1387:1387 SovereignBridgeSpec <> c:21 var
+R1394:1397 Coq.Init.Logic <> ::type_scope:x_'<>'_x not
+R1392:1393 SovereignBridgeSpec <> tp:20 var
+R1398:1398 SovereignBridgeSpec <> c:21 var
+R1446:1463 SovereignBridgeSpec Kernel_Sovereignty <> sec
+R1475:1484 Coq.extraction.Extraction <> <> lib

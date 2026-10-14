@@ -1,0 +1,57 @@
+[general]
+version         = "7.0.0"
+log_level       = "info"
+checkpoint_interval_seconds = 300
+
+[api]
+host            = "127.0.0.1"
+port            = 8765
+cors_origins    = ["http://localhost:3000", "http://localhost:5173"]
+
+[models]
+# Nivel 1: Meta-Análisis
+cipher_model    = "deepseek-r1-32b"
+chronos_model   = "deepseek-r1-14b"
+
+# Nivel 2: Supervisión
+overseer_model  = "deepseek-r1-14b"
+grader_model    = "deepseek-r1-14b"
+
+# Nivel 3: Department Heads
+apex_model      = "whiterabbitneo"
+vantage_model   = "qwen-7b-vantage"
+beacon_model    = "phi-3.5-beacon"
+
+# Nivel 4: Líderes y Especialistas
+rex_model       = "whiterabbitneo"
+atlas_model     = "atlas-coder"
+vector_model    = "phi-3.5-beacon"
+wraith_model    = "llama-8b-abliterated"
+spectre_model   = "whiterabbitneo"
+ghost_model     = "whiterabbitneo"
+mirage_model    = "llama-8b-abliterated"
+archive_model   = "mistral-archive"
+echo_model      = "phi-3.5-beacon"
+phantom_model   = "llama-8b-abliterated"
+pivot_model     = "llama-8b-abliterated"
+sentinel_model  = "llama-8b-abliterated"
+blue_model      = "llama-8b-abliterated"
+hex_model       = "whiterabbitneo"
+
+[scope_guard]
+enabled         = true
+# [REQUIRES_RUNTIME_VALIDATION: claude-api-connection]
+# Set enabled = true and provide api_key when using Scope Guard
+
+[ui]
+default_layout  = "war_room"
+theme           = "dark"
+autonomy_default = "supervised"
+
+[search]
+backend = "duckduckgo"
+max_results = 5
+timeout_seconds = 10
+cache_ttl_minutes = 30
+tavily_api_key = ""
+serper_api_key = ""

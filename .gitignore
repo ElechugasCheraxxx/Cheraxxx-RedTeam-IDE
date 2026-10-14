@@ -1,0 +1,66 @@
+# macOS
+.DS_Store
+.AppleDouble
+._*
+.Spotlight-V100
+.Trashes
+
+# Build systems
+build/
+build_xcode/
+Makefile
+compile_commands.json
+dist/
+out/
+target/            # Rust
+.zig-cache/        # Zig
+zig-out/
+__pycache__/
+*.py[cod]
+.Python
+.venv/
+venv/
+.pytest_cache/
+.coverage
+
+# Compilados
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.rlib
+*.rmeta
+*.dSYM
+*.app
+*.framework/
+*.dSYM/
+
+# Secretos
+*.pem
+*.key
+*.p12
+*.pfx
+.env
+.env.*
+!.env.example
+
+# Datos locales / bases de datos
+backend/data/
+*.sqlite3
+*.db
+pg_wal/
+pg_multixact/
+
+# Dependencias externas vendorizadas
+backend/core-cpp/llama_sourcecode/llama.cpp-master/
+backend/core-cpp/obfuscator/obscura-*/
+
+# IDE
+.idea/
+.vscode/
+*.xcodeproj/
+*.xcworkspace/
+
+# Sistema
+Thumbs.db
