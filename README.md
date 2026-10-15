@@ -497,3 +497,15 @@ MIT — ver [`LICENSE`](LICENSE).
 
 El software se distribuye para su uso en evaluaciones de seguridad
 autorizadas. El autor no se hace responsable del uso no autorizado.
+
+
+---
+
+<div align="center">
+
+**José Miguel Tirado Quiroz** · Security & Infrastructure Engineer · Lima, Perú
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/jose-miguel-tirado-quiroz)
+[![GitHub](https://img.shields.io/badge/GitHub-ElechugasCheraxxx-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ElechugasCheraxxx)
+
+</div>
